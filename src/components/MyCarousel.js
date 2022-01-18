@@ -8,7 +8,7 @@ const MyCarousel = () => {
       src: "/images/castles-get-married-germany(1).png",
       caption: "Gorgeous castles to get married",
     },
-    { src: "/images/Boldt-Castle-Canada2(1).png", caption: "Boldt-Castle-Canada" },
+    { src: "/images/Boldt-Castle-Canada2(1).jpg", caption: "Boldt-Castle-Canada" },
     {
       src: "/images/Neuschwanstein-Castle-Germany(1).png",
       caption: "Neuschwanstein-Castle-Germany",

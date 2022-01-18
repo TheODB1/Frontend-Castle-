@@ -245,3 +245,56 @@ background-color: #e0e0e0ff;
   justify-content: center;
  margin: 0;
  }
+
+ /* Footer styling */
+.footerMainDiv {
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-size: 100%; 
+  margin-bottom: 0;
+  background-image: linear-gradient(
+    rgb(108, 2, 2, 0.005),
+    rgb(108, 2, 2, 0.3),
+    rgb(0, 69, 22, 0.95),
+    rgb(0, 69, 22, 1)
+  );
+}
+ .socialMedia .fa{
+  font-size:48px;
+  color:pink
+ }
+.textFooter {
+  font-size: 1.5rem;
+  padding: 1rem 0rem 0.1rem 0rem;
+  margin: 0;
+}
+
+.textFooter,
+h5,
+h6 {
+  padding: 0.2rem 1rem 0.2rem 1rem;
+  margin: 0;
+}
+
+.socialMedia {
+  padding: 0;
+  padding-left: 1rem;
+  margin: 0;
+}
+
+i {
+  font-size: 2rem;
+  background-color: rgb(160, 103, 32, 0);
+}
+
+i:hover {
+  box-shadow: -2px -2px 10px rgb(245, 247, 211), 2px 2px 10px rgb(245, 247, 211);
+}
+a {
+  padding: 0.8rem;
+  color: rgb(248, 254, 217);
+}
+/* Footer styling  END*/

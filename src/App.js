@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
-import MyCarousel from "./components/MyCarousel";
+import Footer from "./components/Footer";
 import CastleScreen from "./screens/CastleScreen";
 import HomeScreen from "./screens/HomeScreen";
 
@@ -26,8 +26,10 @@ function App() {
               <Route path=":castleId" element={<CastleScreen />} />
             </Route>
           </Routes>
+          <footer className="row center  footerMainDiv ">
+            <Footer />
+          </footer>
         </main>
-        <footer className="row center">All right reserved</footer>
       </div>
     </Router>
   );

@@ -1,29 +1,40 @@
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { detailsCastle } from "../actions/castleActions";
 import { LoadingBox } from "../components/LoadingBox";
 import { MessageBox } from "../components/MessageBox";
 import Rating from "../components/Rating";
 import Maps from "../components/Maps";
 
 const CastleScreen = () => {
-  const { castleId } = useParams();//castleId is passed down from Route with  useParams hook
+  const { castleId } = useParams(); //castleId is passed down from Route with  useParams hook
   // before using Redux this works to get castleId: const castleId = props.match.params.id;
   // const castle = castles.find((x) => x._id === String(id));
-  const dispatch = useDispatch();
-  const castleDetails = useSelector((state) => state.castleDetails); // state
-  const { loading, error, castle } = castleDetails;  // loading,error have states too
-console.log(castle)
+
+  const [castle, setCastle] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
+
   useEffect(() => {
-    dispatch(detailsCastle(castleId)); // listCastle=castleAction
-  }, [dispatch, castleId]);
+    const getCastle = async () => {
+      try {
+        setLoading(true)
+        const res = await fetch(`http://localhost:5000/api/castles/${castleId}`);
+        const data = await res.json();
+        setCastle(data);
+        setLoading(false)
+      } catch (error) {
+        setError(error.message);
+        setLoading(false)
+      }
+    };
+    getCastle();
+  }, [castleId]);
 
   if (!castle) {
-    return  <MessageBox variant="danger">Castle Not Found</MessageBox>;
+    return <MessageBox variant="danger">Castle Not Found</MessageBox>;
   }
   return (
-    <div>      
+    <div>
       {loading ? (
         <LoadingBox></LoadingBox>
       ) : error ? (
@@ -79,7 +90,6 @@ console.log(castle)
                 </ul>
               </div>
               <Maps lat={castle.lat} lon={castle.lon} />
-
             </div>
           </div>
         </div>

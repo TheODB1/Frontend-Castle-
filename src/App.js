@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import CastleScreen from "./screens/CastleScreen";
 import HomeScreen from "./screens/HomeScreen";
+import LogIn from "./components/LogIn";
+import Register from "./components/Register";
 
 function App() {
   return (
@@ -16,12 +18,15 @@ function App() {
           </div>
           <div>
             <a href="/cart">Cart</a>
-            <a href="/signin">SignIn</a>
+            <Link to="/register"> Register </Link>
+            <Link to="/login"> SignIn </Link>
           </div>
         </header>
         <main>
           <Routes>
             <Route path="/" element={<HomeScreen />} exact />
+            <Route path="login" element={<LogIn />}/>
+            <Route path="register" element={<Register />}/>
             <Route path="castle">
               <Route path=":castleId" element={<CastleScreen />} />
             </Route>

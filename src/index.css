@@ -268,7 +268,7 @@ img.large {
 }
 .socialMedia .fa {
   font-size: 48px;
-  color: pink;
+  color: rgb(253, 229, 233);
 }
 .textFooter {
   font-size: 1.5rem;
@@ -375,3 +375,13 @@ a {
     flex: 1;
   }
 }
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ }
+
+ .about-img{
+   max-width: 1000px;   
+ }

@@ -6,6 +6,8 @@ const Navbar = () => {
   return (
     <header className="row navbar">
       <Link to="/"> Home </Link>
+      <Link to="/About"> About </Link>
+      <Link to="/Contact"> Contact </Link>
       <div>
         <a className="logo" href="/">
           <img src="/images/amatira(6).png" alt="Logo" width={500} />
@@ -14,14 +16,14 @@ const Navbar = () => {
       <div>
         {isAuthenticated ? (
           <>
-            <a href="/cart">Cart</a>
             <Link to="/protected/create-post"> CreateCastle </Link>
             <a onClick={signout}>LogOut</a>
           </>
         ) : (
           <>
-            <Link to="/register"> Register </Link>
-            <Link to="/login"> LogIn </Link>
+            <Link to="/protected/cart"> Cart </Link>
+            <Link to="/register" > Register </Link>
+            <Link to="/login" > LogIn </Link>
           </>
         )}
       </div>

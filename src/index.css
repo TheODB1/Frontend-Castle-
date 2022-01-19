@@ -157,7 +157,7 @@ img {
   border-radius: 0.5rem;
 }
 img.medium {
-  max-width: 29rem;
+  max-width: 28rem;
   width: 100%;
 }
 img.large {
@@ -177,9 +177,15 @@ img.large {
 .card.homeScreen {
   background-color: rgb(254, 249, 255);
 }
+
+.card.homeScreen:hover {
+  background-color: rgb(252, 231, 229);
+  cursor: -webkit-grabbing;
+  box-shadow: -5px -5px 20px rgb(245, 247, 211), 5px 5px 20px rgb(245, 247, 211);
+}
+
 .card {
-  border: 0.1rem #c0c0c0 solid;
-  background-color: rgb(247, 166, 166);
+  border: 0.1rem #c0c0c0 solid; 
   border-radius: 0.5rem;
   margin: 1rem;
 }
@@ -193,6 +199,7 @@ img.large {
   font-size: 2rem;
   color: #a02020;
 }
+
 
 /* Rating */
 .rating span {

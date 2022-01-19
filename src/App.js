@@ -6,12 +6,14 @@ import CastleScreen from "./screens/CastleScreen";
 import HomeScreen from "./screens/HomeScreen";
 import LogIn from "./components/LogIn";
 import Register from "./components/Register";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import CreatePost from "./components/CreatePost";
 import Layout from "./components/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
 import UserProfile from "./components/UserProfile";
 import NotFound from "./components/NotFound";
+import 'react-toastify/dist/ReactToastify.css';
+import './index.css';
 
 function App() {
   return (
@@ -19,18 +21,16 @@ function App() {
     <ToastContainer />
     <Router>
       <div className="grid-container">
-        <header>
+        {/* <header>
           <Navbar />
-        </header>
+        </header> */}
         <main>
           <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<HomeScreen />} exact />
-              <Route path="/" element={<HomeScreen />} exact />
+            <Route path="/" element={<Layout />}>             
+              <Route index element={<HomeScreen />}  />
               <Route path="login" element={<LogIn />} />
               <Route path="register" element={<Register />} />
-              <Route path="castle/:castleId" element={<CastleScreen />} />
-              <Route path="create-post" element={<CreatePost />} />
+              <Route path="castle/:castleId" element={<CastleScreen />} />              
               <Route path="protected" element={<ProtectedRoute />}>
                 <Route index element={<UserProfile />} />
                 <Route path="create-post" element={<CreatePost />} />

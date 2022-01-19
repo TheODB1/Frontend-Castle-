@@ -6,7 +6,6 @@ import CastleScreen from "./screens/CastleScreen";
 import HomeScreen from "./screens/HomeScreen";
 import LogIn from "./components/LogIn";
 import Register from "./components/Register";
-// import Navbar from "./components/Navbar";
 import CreatePost from "./components/CreatePost";
 import Layout from "./components/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
@@ -21,9 +20,6 @@ function App() {
     <ToastContainer />
     <Router>
       <div className="grid-container">
-        {/* <header>
-          <Navbar />
-        </header> */}
         <main>
           <Routes>
             <Route path="/" element={<Layout />}>             

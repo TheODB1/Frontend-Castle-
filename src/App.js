@@ -6,13 +6,13 @@ import CastleScreen from "./screens/CastleScreen";
 import HomeScreen from "./screens/HomeScreen";
 import LogIn from "./components/LogIn";
 import Register from "./components/Register";
-import CreatePost from "./components/CreatePost";
 import Layout from "./components/Layout";
 import ProtectedRoute from "./components/ProtectedRoute";
 import UserProfile from "./components/UserProfile";
 import NotFound from "./components/NotFound";
 import 'react-toastify/dist/ReactToastify.css';
 import './index.css';
+import CreateCastle from "./components/CreateCastle";
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
               <Route path="castle/:castleId" element={<CastleScreen />} />              
               <Route path="protected" element={<ProtectedRoute />}>
                 <Route index element={<UserProfile />} />
-                <Route path="create-post" element={<CreatePost />} />
+                <Route path="create-post" element={<CreateCastle />} />
               </Route>
               <Route path="*" element={<NotFound />} />
             </Route>

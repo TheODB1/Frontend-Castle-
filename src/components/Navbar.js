@@ -15,13 +15,13 @@ const Navbar = () => {
         {isAuthenticated ? (
           <>
             <a href="/cart">Cart</a>
-            <Link to="/protected/create-post"> CreatePost </Link>
-            <a onClick={signout}>Log out</a>
+            <Link to="/protected/create-post"> CreateCastle </Link>
+            <a onClick={signout}>LogOut</a>
           </>
         ) : (
           <>
             <Link to="/register"> Register </Link>
-            <Link to="/login"> SignIn </Link>
+            <Link to="/login"> LogIn </Link>
           </>
         )}
       </div>

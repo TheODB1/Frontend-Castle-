@@ -14,8 +14,8 @@ body {
   background-color: ivory;
 }
 
-  body:before {
-  content: '';
+body:before {
+  content: "";
   position: absolute;
   z-index: 2;
   top: 0;
@@ -25,19 +25,25 @@ body {
   pointer-events: none;
   background-image: url(https://divi.space/wp-content/uploads/2019/02/hearts.png);
   animation: falling-hearts 8s linear infinite;
+}
+@keyframes falling-hearts {
+  0% {
+    background-position: 0% 30%;
   }
-  @keyframes falling-hearts {
-  0% {background-position: 0% 30%;}
+}
+
+@-moz-keyframes falling-hearts {
+  0% {
+    background-position: 0% 30%;
   }
-  
-  @-moz-keyframes falling-hearts {
-  0% {background-position: 0% 30%;}
+}
+
+@-webkit-keyframes falling-hearts {
+  0% {
+    background-position: 0% 30%;
   }
-  
-  @-webkit-keyframes falling-hearts {
-  0% {background-position: 0% 30%;}
-  }
-  
+}
+
 #root {
   height: 100%;
 }
@@ -57,9 +63,9 @@ body {
 /* header */
 header {
   grid-area: header;
-   background-color: #ffe0e0e0;
-   z-index: 1;
-  }
+  background-color: #ffe0e0e0;
+  z-index: 1;
+}
 header a {
   color: #a02020;
   padding: 1rem;
@@ -82,10 +88,11 @@ h1 {
 }
 h2 {
   font-size: 1.6rem;
-  padding: 0.5rem 0;  
+  padding: 0.5rem 0;
 }
 a {
   text-decoration: none;
+  color: #ff8000;
 }
 a:hover {
   color: #ff8000;
@@ -123,23 +130,23 @@ button.block {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
 }
 .navbar {
   overflow: hidden;
-  position: fixed !important; 
+  position: fixed;
   top: 0;
   width: 100%;
 }
 
 .row.center {
   justify-content: center;
- }
+}
 .row.top {
   align-items: flex-start;
 }
 .col-2 {
-  flex: 2 1 45rem;  
+  flex: 2 1 45rem;
 }
 .col-1 {
   flex: 1 1 20rem;
@@ -156,7 +163,7 @@ img.medium {
 img.large {
   max-width: 60rem;
   width: 100%;
-  margin-top: 1rem;  
+  margin-top: 1rem;
 }
 .words {
   text-align: justify;
@@ -167,12 +174,12 @@ img.large {
   margin: 0 1rem;
 }
 /* Card */
-.card.homeScreen{
-  background-color: rgb(254, 249, 255) ;
+.card.homeScreen {
+  background-color: rgb(254, 249, 255);
 }
 .card {
   border: 0.1rem #c0c0c0 solid;
-  background-color: rgb(247, 166, 166) ;
+  background-color: rgb(247, 166, 166);
   border-radius: 0.5rem;
   margin: 1rem;
 }
@@ -184,7 +191,7 @@ img.large {
 }
 .price {
   font-size: 2rem;
-  color:#a02020;
+  color: #a02020;
 }
 
 /* Rating */
@@ -207,23 +214,20 @@ img.large {
 
 .alert {
   padding: 1rem;
-  border: 0.1rem solid transparent ;
-  border-radius: 0.5rem; 
+  border: 0.1rem solid transparent;
+  border-radius: 0.5rem;
 }
 .alert-info {
-color: #2020a0;
-background-color: #e0e0e0ff;
+  color: #2020a0;
+  background-color: #e0e0e0ff;
 }
-.alert-danger{
+.alert-danger {
   color: #a02020;
   background-color: #ffe0e0e0;
-
 }
 
-
-
 /* Maps styles */
-.mapContainer{
+.mapContainer {
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -232,7 +236,7 @@ background-color: #e0e0e0ff;
   border-radius: 35px;
   overflow: hidden;
 }
-.mapmainContainer{  
+.mapmainContainer {
   max-width: 150vh;
   margin: auto;
   margin-top: 2rem;
@@ -240,20 +244,20 @@ background-color: #e0e0e0ff;
 }
 /* Maps styles END */
 
-.carousel{
+.carousel {
   display: flex;
   justify-content: center;
- margin: 0;
- }
+  margin: 0;
+}
 
- /* Footer styling */
+/* Footer styling */
 .footerMainDiv {
   top: 0;
   left: 0;
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-size: 100%; 
+  background-size: 100%;
   margin-bottom: 0;
   background-image: linear-gradient(
     rgb(108, 2, 2, 0.005),
@@ -262,10 +266,10 @@ background-color: #e0e0e0ff;
     rgb(0, 69, 22, 1)
   );
 }
- .socialMedia .fa{
-  font-size:48px;
-  color:pink
- }
+.socialMedia .fa {
+  font-size: 48px;
+  color: pink;
+}
 .textFooter {
   font-size: 1.5rem;
   padding: 1rem 0rem 0.1rem 0rem;
@@ -298,3 +302,76 @@ a {
   color: rgb(248, 254, 217);
 }
 /* Footer styling  END*/
+
+/* app.css */
+.container {
+  max-width: 960px;
+}
+
+/*
+   * Custom translucent site header
+   */
+
+.site-header {
+  background-color: rgba(0, 0, 0, 0.85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #8e8e8e;
+  transition: color 0.15s ease-in-out;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+   * Dummy devices (replace them with your own or something else entirely!)
+   */
+
+.product-device {
+  position: absolute;
+  right: 10%;
+  bottom: -30%;
+  width: 300px;
+  height: 540px;
+  background-color: #333;
+  border-radius: 21px;
+  transform: rotate(30deg);
+}
+
+.product-device::before {
+  position: absolute;
+  top: 10%;
+  right: 10px;
+  bottom: 10%;
+  left: 10px;
+  content: "";
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.product-device-2 {
+  top: -25%;
+  right: auto;
+  bottom: 0;
+  left: 5%;
+  background-color: #e5e5e5;
+}
+
+.castle-title {
+  color: #a02020;
+}
+/*
+   * Extra utilities
+   */
+
+.flex-equal > * {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}

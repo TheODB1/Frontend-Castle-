@@ -24,7 +24,7 @@ const TextEditor = ({ onChange }) => {
     <Editor
       apiKey={process.env.REACT_APP_TINY_MCE_API_KEY}
       init={{
-        height: 500,
+        height: 300 ,
         menubar: true,
         plugins: [
           'advlist autolink lists link image charmap print preview anchor',

@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-      <div>
+      <div className="row center  footerMainDiv ">
         <div className="textFooter">
           <h5>Created by: Christ & Zhi.  Share or follow us on:</h5>          
         </div>

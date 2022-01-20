@@ -14,7 +14,7 @@ const HomeScreen = () => {
     const getCastles = async () => {
       try {
         setLoading(true)
-        const res = await fetch("http://localhost:5000/api/castles");
+        const res = await fetch(`${process.env.REACT_APP_BLOG_API}/api/castles`);
         const data = await res.json();
         setCastles(data);
         setLoading(false)

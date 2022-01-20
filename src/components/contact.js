@@ -1,7 +1,7 @@
 const Contact = () => {
   return (
-    <form>
-      <h2>You can contact us sent us a message ✉️</h2>
+    <form style={{ display: "flex", justifyContent: "center",fontSize:"30px" }} ><br />
+      <h1 style={{ fontSize:"30px" ,color:"brown"}}>You can contact us sent us a message ✉️</h1>
       <form
         name="contact"
         method="POST"
@@ -9,8 +9,9 @@ const Contact = () => {
         data-netlify="true"
       >
         <div>
-          <label htmlFor="name">Name :</label>
+          <label style={{ color:"brown" }} htmlFor="name">Name :</label>
           <input
+          style={{ fontSize:"25px" ,}}
             type="text"
             id="name"
             name="name"
@@ -19,16 +20,17 @@ const Contact = () => {
         </div>{" "}
         <br />
         <div>
-          <label htmlFor="email">Email :</label>
+          <label style={{ color:"brown" }} htmlFor="email">Email :</label>
           <input
+            style={{ fontSize:"25px" }}
             type="email"
             name="email"
             id="email"
             placeholder="Enter your email here"
           />
-        </div>
+        </div><br />
         <div>
-          <label htmlFor="message" className="msgText">
+          <label  style={{ color:"brown" }} htmlFor="message" className="msgText">
             Message :
           </label>
           <br />
@@ -38,7 +40,7 @@ const Contact = () => {
         <div>
           {" "}
           <br />
-          <button type="submit" className="formButton">
+          <button style={{ color :" black", fontSize: "30px" }}   type="submit" className="formButton">
             Send
           </button>
         </div>

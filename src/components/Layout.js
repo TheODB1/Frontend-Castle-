@@ -7,8 +7,7 @@ const Layout = () => {
   return (
     <>
       <header >
-      {/* style={{marginBottom:'30px'}} */}
-        <Navbar />
+            <Navbar />
       </header>
       <Outlet />
     </>

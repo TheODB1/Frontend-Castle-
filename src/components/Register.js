@@ -19,8 +19,9 @@ const Register = () => {
 
   if (isAuthenticated) return <Navigate to={from} replace />;
   return (
-    <div style={{ display: "flex", justifyContent: "center" }}>
-      <div className="col-md-4">
+    <div style={{ display: "flex", justifyContent: "center", fontSize:"30px",color:"brown"}}>
+      <div className="col-md-4">       
+        <br />
         <br />
         <br />
         <br />
@@ -28,6 +29,7 @@ const Register = () => {
           <div>
             <label htmlFor="name">Name :</label>
             <input
+              style={{ fontSize:"25px"}}
               type="text"
               id="name"
               name="name"
@@ -43,6 +45,7 @@ const Register = () => {
           <div>
             <label htmlFor="email">Email :</label>
             <input
+            style={{ fontSize:"25px"}}
               type="email"
               name="email"
               id="email"
@@ -58,6 +61,7 @@ const Register = () => {
           <div>
             <label htmlFor="password">Password:</label>
             <input
+              style={{ fontSize:"25px"}}
               className={
                 errors.password ? "form-control is-invalid" : "form-control"
               }
@@ -80,7 +84,7 @@ const Register = () => {
           </div>
           <br />
           <div data-netlify-recaptcha="true"></div>
-          <button type="submit" style={{ color: "red" }}>
+          <button type="submit" style={{ color :" black", fontSize: "30px" }} >
             Register
           </button>
         </form>

@@ -157,11 +157,12 @@ img {
   border-radius: 0.5rem;
 }
 img.medium {
-  max-width: 28rem;
+  max-width: 33rem;
   width: 100%;
+
 }
 img.large {
-  max-width: 60rem;
+  max-width: 93rem;
   width: 100%;
   margin-top: 1rem;
 }
@@ -187,7 +188,7 @@ img.large {
 .card {
   border: 0.1rem #c0c0c0 solid; 
   border-radius: 0.5rem;
-  margin: 1rem;
+  margin: 2.5rem;
 }
 .card-body {
   padding: 1rem;
@@ -244,7 +245,7 @@ img.large {
   overflow: hidden;
 }
 .mapmainContainer {
-  max-width: 150vh;
+  max-width: 155vh;
   margin: auto;
   margin-top: 2rem;
   margin-bottom: 2rem;

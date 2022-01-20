@@ -1,6 +1,7 @@
 import React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Searchbar } from "./Searchbar";
 
 const MyCarousel = () => {
   const images = [
@@ -20,6 +21,7 @@ const MyCarousel = () => {
       {images.map(({ src, caption }) => (
         <div>
           <img alt={caption} src={src} />
+          <Searchbar />
           <p className="legend">{caption}</p>
         </div>
       ))}

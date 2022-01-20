@@ -20,7 +20,8 @@ const CastleScreen = () => {
       const {
         data: { checkoutURL },
       } = await axios.post(
-        `${process.env.REACT_APP_BLOG_API}/payments/create-checkout-session`, castle
+        `${process.env.REACT_APP_BLOG_API}/payments/create-checkout-session`,
+        castle
       );
       window.location.href = checkoutURL;
     } catch (error) {
@@ -75,7 +76,9 @@ const CastleScreen = () => {
                 <li className="words">Price: €{castle.price}</li>
                 <li className="words">
                   Description:
-                  <p>{castle.description}</p>
+                  <div
+                    dangerouslySetInnerHTML={{ __html: castle.description }}
+                  />
                 </li>
               </ul>
             </div>
@@ -92,11 +95,7 @@ const CastleScreen = () => {
                     <div className="row">
                       <div>Status</div>
                       <div>
-                        {castle.countInStock > 0 ? (
-                          <span className="success">In Stock</span>
-                        ) : (
-                          <span className="danger">Unavailable</span>
-                        )}
+                        <span className="success">Available</span>
                       </div>
                     </div>
                   </li>

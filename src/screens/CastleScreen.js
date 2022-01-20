@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { useParams } from "react-router-dom";
 import { LoadingBox } from "../components/LoadingBox";
 import { MessageBox } from "../components/MessageBox";
@@ -14,17 +15,32 @@ const CastleScreen = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 
+  const createCheckoutSession = async () => {
+    try {
+      const {
+        data: { checkoutURL },
+      } = await axios.post(
+        `${process.env.REACT_APP_BLOG_API}/payments/create-checkout-session`, castle
+      );
+      window.location.href = checkoutURL;
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
     const getCastle = async () => {
       try {
-        setLoading(true)
-        const res = await fetch(`http://localhost:5000/api/castles/${castleId}`);
+        setLoading(true);
+        const res = await fetch(
+          `${process.env.REACT_APP_BLOG_API}/api/castles/${castleId}`
+        );
         const data = await res.json();
         setCastle(data);
-        setLoading(false)
+        setLoading(false);
       } catch (error) {
         setError(error.message);
-        setLoading(false)
+        setLoading(false);
       }
     };
     getCastle();
@@ -85,7 +101,12 @@ const CastleScreen = () => {
                     </div>
                   </li>
                   <li>
-                    <button className="primary block">Add to Cart</button>
+                    <button
+                      className="primary block"
+                      onClick={createCheckoutSession}
+                    >
+                      Checkout!
+                    </button>
                   </li>
                 </ul>
               </div>

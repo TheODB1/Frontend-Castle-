@@ -11,7 +11,7 @@ const About = () => {
         <div>    
           ⭐ ZhiJuan Tang - Passionate Web-Developer with eyes for design || 4+
           years Project Management exp.
-        </div>
+        </div>    <br />   
       </form>
     </form>
   );

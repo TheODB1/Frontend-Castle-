@@ -19,77 +19,70 @@ const LogIn = () => {
   if (loading) return "Loading...";
   if (isAuthenticated) return <Navigate to={from} replace />;
   return (
-    <form className="row mt-5 justify-content-center">
-      <form
-        name="login"
-        method="POST"
-        data-netlify-recaptcha="true"
-        data-netlify="true"
-      >
-        <div className="col-md-4">
-          <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
-            <div>
-              <br />
-              <br />
-              <br />
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <div className="col-md-4">
+        <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
+          <div>
+            <br />
+            <br />
+            <br />
 
-              <label htmlFor="email" className="form-label">
-                Email :
-              </label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Enter your email here"
-                className={
-                  errors.email ? "form-control is-invalid" : "form-control"
-                }
-                {...register("email", { required: true })}
-              />
-              {errors.email && (
-                <div className="invalid-feedback">Email is required</div>
-              )}
-            </div>
+            <label htmlFor="email" className="form-label">
+              Email :
+            </label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email here"
+              className={
+                errors.email ? "form-control is-invalid" : "form-control"
+              }
+              {...register("email", { required: true })}
+            />
+            {errors.email && (
+              <div className="invalid-feedback">Email is required</div>
+            )}
+          </div>
+          <br />
+          <div>
+            <label htmlFor="password" className="form-label">
+              Password:
+            </label>
+            <input
+              className={
+                errors.password ? "form-control is-invalid" : "form-control"
+              }
+              type="password"
+              {...register("password", { required: true })}
+            />
+            {errors.password && (
+              <div className="invalid-feedback">Password is required</div>
+            )}
+          </div>
+          <br />
+          <div>
+            <small>
+              Don't have an account?{" "}
+              <Link to="/register" style={{ color: "red" }}>
+                Register
+              </Link>{" "}
+              instead
+            </small>
             <br />
-            <div>
-              <label htmlFor="password" className="form-label">
-                Password:
-              </label>
-              <input
-                className={
-                  errors.password ? "form-control is-invalid" : "form-control"
-                }
-                type="password"
-                {...register("password", { required: true })}
-              />
-              {errors.password && (
-                <div className="invalid-feedback">Password is required</div>
-              )}
-            </div>
-            <br />
-            <div>
-              <small>
-                Don't have an account?{" "}
-                <Link to="/register" style={{ color: "red" }}>
-                  Register
-                </Link>{" "}
-                instead
-              </small>
-              <br />
-            </div>
-            <br />
-            <div data-netlify-recaptcha="true"></div>
-            <button
-              type="submit"
-              className="mt-3 btn btn-success"
-              style={{ color: "red" }}
-            >
-              Log in
-            </button>
-          </form>
-        </div>
-      </form>{" "}
-    </form>
+          </div>
+          <br />
+          <div data-netlify-recaptcha="true"></div>
+          <button
+            type="submit"
+            className="mt-3 btn btn-success"
+            style={{ color: "red" }}
+          >
+            Log in
+          </button>
+        </form>
+      </div>
+    </div>
   );
 };
 

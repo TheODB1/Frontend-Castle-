@@ -19,14 +19,8 @@ const Register = () => {
 
   if (isAuthenticated) return <Navigate to={from} replace />;
   return (
-    <form>
-      <form
-        name="contact"
-        method="POST"
-        data-netlify-recaptcha="true"
-        data-netlify="true"
-      ></form>
-      <form>
+    <div style={{ display: "flex", justifyContent: "center" }}>
+      <div className="col-md-4">
         <br />
         <br />
         <br />
@@ -90,8 +84,8 @@ const Register = () => {
             Register
           </button>
         </form>
-      </form>
-    </form>
+      </div>
+    </div>
   );
 };
 

@@ -5,8 +5,7 @@ const About = () => {
       <form> <br /> 
         <h2> This is some info about us the CREATORS: </h2>      
         <div>         
-          ⭐ Christopher Patterson - Ex Project Manager IT Services Aviation
-          Company NameFlughafen Stuttgart
+          ⭐ Christopher Patterson 
         </div>        
         <div>    
           ⭐ ZhiJuan Tang - Passionate Web-Developer with eyes for design || 4+

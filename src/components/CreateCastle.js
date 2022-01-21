@@ -53,16 +53,24 @@ const CreateCastle = () => {
   };
 
   return (
+    <><br/><br/><br/>
     <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
       <div
         style={{
           display: "flex",
           justifyContent: "space-between",
           marginTop: "20px",
+          alignItems: "flex-start"
         }}
       >
         <div>
-          <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              fontSize: "30px",
+            }}
+          >
             <div>
               <label htmlFor="name" className="form-label">
                 Name:
@@ -77,6 +85,14 @@ const CreateCastle = () => {
                 <div className="invalid-feedback">Name is required</div>
               )}
             </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              fontSize: "30px",
+            }}
+          >
             <div>
               <label htmlFor="price" className="form-label">
                 Price:
@@ -92,7 +108,13 @@ const CreateCastle = () => {
               )}
             </div>
           </div>
-          <div style={{ display: "flex", justifyContent: "space-around" }}>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              fontSize: "30px",
+            }}
+          >
             <div>
               <label htmlFor="city" className="form-label">
                 City:
@@ -107,6 +129,15 @@ const CreateCastle = () => {
                 <div className="invalid-feedback">City is required</div>
               )}
             </div>
+          </div>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              fontSize: "30px",
+            }}
+          >
             <div>
               <label htmlFor="country" className="form-label">
                 Country:
@@ -122,7 +153,14 @@ const CreateCastle = () => {
               )}
             </div>
           </div>
-          <div style={{ display: "flex", justifyContent: "space-around" }}>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              fontSize: "30px",
+            }}
+          >
             <div>
               <label htmlFor="lon" className="form-label">
                 Longitute:
@@ -137,6 +175,14 @@ const CreateCastle = () => {
                 <div className="invalid-feedback">Longitute is required</div>
               )}
             </div>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              fontSize: "30px",
+            }}
+          >
             <div>
               <label htmlFor="lat" className="form-label">
                 Latitute:
@@ -152,27 +198,43 @@ const CreateCastle = () => {
               )}
             </div>
           </div>
-          <div style={{ display: "flex", justifyContent: "space-around" }}>
+
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              fontSize: "30px",
+            }}
+          >
             <div>
               <label htmlFor="image" className="form-label">
                 Image:
               </label>
-              <input type="file" onChange={uploadImage} />
-              <input
-                hidden
-                className={
-                  errors.title ? "form-control is-invalid" : "form-control"
-                }
-                {...register("image", { required: true })}
-              />
-              {errors.name && (
-                <div className="invalid-feedback">Image is required</div>
-              )}
             </div>
-            {isImageUploaded && (
-              <img src={isImageUploaded} alt="Preview castle" width="300px" />
+          </div>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              fontSize: "30px",
+            }}
+          >
+            <input type="file" onChange={uploadImage} />
+            <input
+              hidden
+              className={
+                errors.title ? "form-control is-invalid" : "form-control"
+              }
+              {...register("image", { required: true })}
+            />
+            {errors.name && (
+              <div className="invalid-feedback">Image is required</div>
             )}
           </div>
+
+          {isImageUploaded && (
+            <img src={isImageUploaded} alt="Preview castle" width="300px" />
+          )}
         </div>
 
         <Controller
@@ -189,7 +251,7 @@ const CreateCastle = () => {
       <button className="btn btn-success" type="submit">
         Create Castle
       </button>
-    </form>
+    </form></>
   );
 };
 

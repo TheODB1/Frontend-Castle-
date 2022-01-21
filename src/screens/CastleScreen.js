@@ -104,7 +104,7 @@ const CastleScreen = () => {
                       className="primary block"
                       onClick={createCheckoutSession}
                     >
-                      Checkout!
+                      Check Out
                     </button>
                   </li>
                 </ul>

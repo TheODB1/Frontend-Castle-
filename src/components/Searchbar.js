@@ -7,26 +7,21 @@ export const Searchbar = () => {
             <form action="#" method="post" novalidate="novalidate">
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                                <input type="text" class="form-control search-slt" placeholder="Enter Pickup City" />
+                        <div class="row">                            
+                            <div  class="col-lg-3 col-md-3 col-sm-12 p-0">
+                                <input style={{ fontSize: "15px" }} type="text" class="form-control search-slt" placeholder="Enter Price Range" />
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                                <input type="text" class="form-control search-slt" placeholder="Enter Drop City" />
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                                <select class="form-control search-slt" id="exampleFormControlSelect1">
-                                    <option>Select Vehicle</option>
-                                    <option>Example one</option>
-                                    <option>Example one</option>
-                                    <option>Example one</option>
-                                    <option>Example one</option>
-                                    <option>Example one</option>
-                                    <option>Example one</option>
+                                <select style={{ fontSize: "17px" }}    class="form-control search-slt" id="exampleFormControlSelect1">
+                                    <option>Germany</option>
+                                    <option>Poland</option>
+                                    <option>Cananda</option>
+                                    <option>France</option>
+                                    <option>Mexico</option>                  
                                 </select>
                             </div>
                             <div class="col-lg-3 col-md-3 col-sm-12 p-0">
-                                <button type="button" class="btn btn-danger wrn-btn">Search</button>
+                                <button  style={{ fontSize: "14px" }}  type="button" class="btn btn-danger wrn-btn">Search</button>
                             </div>
                         </div>
                     </div>
